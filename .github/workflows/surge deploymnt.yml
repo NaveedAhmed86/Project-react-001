@@ -20,32 +20,32 @@ jobs:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
       
-    - name: install Node.js
+    - name: install NodeJS
     - uses: actions/setup-node@v2-beta
       with: 
         node-version: 12 
 
     - name: GitHub Action for Yarn
     - uses: Borales/actions-yarn@v2.3.0
-      with:
+    with:
               # Yarn command
-      cmd: install  # npm install/yarn install
+      cmd: install  will run 'yarn install' command
       
-    - name: Creating build
+      name: Build React app
       run: yarn build
       
       
-    - name: Installing Surge
-      run: npm install -g surge
+    -name: Installing Surge
+    run: npm install -g surge
       
-    - name: Deploying on Surge
-      run: surge ./build http://bootcam2020_project1.surge.sh --token ${{ secrets.SURGE_TOKEN }}
+    name: Deploying on Surge
+  run: surge ./build Project-react-oo11.surge.su --token ${{ secrets.SURGE_TOKEN }}
       
       
    
     # Runs a single command using the runners shell
-    - name: Run a one-line script
-      run: echo Hello, world!
+  name: Run a one-line script
+run: echo Hello, world!
 
     # Runs a set of commands using the runners shell
     - name: Run a multi-line script
