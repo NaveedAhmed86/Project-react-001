@@ -41,14 +41,14 @@ jobs:
     name: Deploying on Surge
   run: surge ./build Project-react-oo11.surge.su --token ${{ secrets.SURGE_TOKEN }}
       
-      
-   
+       
     # Runs a single command using the runners shell
   name: Run a one-line script
 run: echo Hello, world!
 
     # Runs a set of commands using the runners shell
-    - name: Run a multi-line script
+    
+    name:Run a multi-line script
       run: |
         echo Add other actions to build,
         echo test, and deploy your project.
