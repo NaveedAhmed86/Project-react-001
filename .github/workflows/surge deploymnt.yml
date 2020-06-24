@@ -28,15 +28,13 @@ jobs:
     - uses: Borales/actions-yarn@v2.3.0
     with:
               # Yarn command
-      cmd: install  #npm install/yarn install
+     cmd: install  #npm install/yarn install
       
-      name: Build React app
-      run: yarn build
-      
-      
-    -name: Installing Surge
-     run: npm install -g surge
+   - name: Build React app
+   - run: yarn build
+         
+   - name: Installing Surge
+   - run: npm install -g surge
       
     name: Deploying on Surge
     run: surge ./build Project-react-001.surge.sh --token ${{ secrets.SURGE_TOKEN }}
-      
